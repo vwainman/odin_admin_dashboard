@@ -6,5 +6,43 @@ body {
     display: grid;
     min-height: 100vh;
     margin: 0;
-    grid-template: 1fr 3fr / 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+aside nav a {
+    display: block;
+}
+
+#search-and-profile {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#intro-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#intro-bar #avatar-welcome {
+    display: flex;
+    align-items: center;
+}
+
+#intro-bar #actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+#content-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#projects-grid {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
 }
