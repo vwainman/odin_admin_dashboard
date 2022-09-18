@@ -2,6 +2,10 @@
     border: 1px solid black;
 }
 
+h1 {
+    font-size: 30px;
+}
+
 body {
     display: grid;
     min-height: 100vh;
@@ -9,8 +13,30 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
+aside {
+    color: white;
+    background-color: #1992d4;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+#content-grid {
+    background-color: #e2e8f0;
+}
+
+.card,
+.side-card {
+    background-color: #ffffff;
+}
+
 aside nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
     display: block;
+    font-size: x-large;
 }
 
 #search-and-profile {
@@ -42,7 +68,12 @@ aside nav a {
     grid-template-columns: 3fr 1fr;
 }
 
+#projects {
+    margin: 0 20px 0 20px;
+}
+
 #projects-grid {
     display: grid;
+    grid-gap: 20px;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
 }
