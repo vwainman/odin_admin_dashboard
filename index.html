@@ -12,184 +12,220 @@
 
 <body>
     <aside>
-        <h1>Dashboard</h1>
+        <h1><i class="fa fa-fw fa-superpowers"></i>Dashboard</h1>
         <nav>
             <a href=""><i class="fa fa-fw fa-home"></i>Home</a>
-            <a href="">Profile</a>
-            <a href="">Messages</a>
-            <a href="">History</a>
-            <a href="">Tasks</a>
-            <a href="">Communities</a>
-            <a href="">Settings</a>
-            <a href="">Support</a>
-            <a href="">Privacy</a>
+            <a href=""><i class="fa fa-fw fa-user-circle-o"></i>Profile</a>
+            <a href=""><i class="fa fa-fw fa-envelope"></i>Messages</a>
+            <a href=""><i class="fa fa-fw fa-history"></i>History</a>
+            <a href=""><i class="fa fa-fw fa-book"></i>Tasks</a>
+            <a href=""><i class="fa fa-fw fa-users"></i>Communities</a>
+            <br>
+            <a href=""><i class="fa fa-fw fa-cog"></i>Settings</a>
+            <a href=""><i class="fa fa-fw fa-question-circle"></i>Support</a>
+            <a href=""><i class="fa fa-fw fa-low-vision"></i>Privacy</a>
         </nav>
     </aside>
     <main>
         <header>
-            <div id="search-and-profile">
-                <form>
-                    <label for="search-box" hidden>Search Form</label>
-                    <button>Search Icon</button>
-                    <input placeholder="Search..." list="search-hints" type="search" name="search-box" id="search-box"
-                        autocomplete="off">
-                </form>
-                <div>
-                    <a href="" title="notification-bell">Bell</a>
-                    <a href="" class="profile-pic">Profile Picture</a>
-                    <a href="" title="profile-name">Name</a>
-                </div>
+            <div id="search">
+                <label for="search-field">
+                    <button id="search-btn"><i class="fa fa-search"></i></button>
+                </label>
+                <input placeholder="Search..." type="search" id="search-field" autocomplete="off">
+            </div>
+            <div id="profile">
+                <a href="" title="notification-bell"><i class="fa fa-bell-o"></i></a>
+                <img class="small-profile-img" src="/profile-pic.jpg" alt="Profile Picture">
+                <h2>Vincent Wainman</h2>
             </div>
             <div id="intro-bar">
-                <div id="avatar-welcome">
-                    <a href="" class="profile-pic">Profile Picture</a>
-                    <div>
-                        <h3>Hi there,</h3>
-                        <h1>Name (@username)</h1>
-                    </div>
-                </div>
-                <div id="actions">
-                    <button>New</button>
-                    <button>Upload</button>
-                    <button>Share</button>
-                </div>
+                <img class="medium-profile-img" src="/profile-pic.jpg" alt="Profile Picture">
+                <!-- image credit: https://www.pexels.com/photo/light-painting-at-night-327509/ -->
+                <h3>Hi there,</h3>
+                <h1>Vincent Wainman (@username)</h1>
+            </div>
+            <div id="actions">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
             </div>
         </header>
         <div id="content-grid">
-            <div id="projects">
+            <div id="projects-grid">
                 <h2>Your Projects</h2>
-                <div id="projects-grid">
-                    <div class="card">
+                <div class="card">
+                    <article>
                         <h2>Super Cool Project</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere ac lectus eget
                             molestie. In iaculis ligula at
-                            nunc semper egestas. Morbi sodales nulla in leo efficitur laoreet. Proin laoreet nisi quis
+                            nunc semper egestas. Morbi sodales nulla in leo efficitur laoreet. Proin laoreet nisi
+                            quis
                             vulputate facilisis. Sed
-                            scelerisque, massa eget fringilla ullamcorper, leo sapien luctus nulla, vitae blandit risus
+                            scelerisque, massa eget fringilla ullamcorper, leo sapien luctus nulla, vitae blandit
+                            risus
                             sem sed leo.</p>
-                        <div class="card-actions">
-                            <button>Bookmark</button>
-                            <button>Edit</button>
-                            <button>Share</button>
-                        </div>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
-                    <div class="card">
+                </div>
+                <div class="card">
+                    <article>
                         <h2>Less Cool Project</h2>
-                        <p>Mauris tempor, quam id accumsan eleifend, ex velit congue diam, vel rhoncus sem quam sed
+                        <p>Mauris tempor, quam id accumsan eleifend, ex velit congue diam, vel rhoncus sem
+                            quam sed
                             turpis.
                             Morbi finibus nec justo
-                            ut sodales. Quisque luctus, velit eu commodo dapibus, massa lectus luctus mi, quis mattis
+                            ut sodales. Quisque luctus, velit eu commodo dapibus, massa lectus luctus mi,
+                            quis mattis
                             nunc
                             turpis non mi. Curabitur
                             sit amet eleifend sapien, et pulvinar urna.</p>
-                        <div class="card-actions">
-                            <button>Bookmark</button>
-                            <button>Edit</button>
-                            <button>Share</button>
-                        </div>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
-                    <div class="card">
+                </div>
+                <div class="card">
+                    <article>
                         <h2>Impossible App</h2>
                         <p>Fusce iaculis nisi eget elit malesuada blandit. Vivamus dictum aliquet elementum. Nam
                             porttitor
                             quam ipsum. Fusce vitae
-                            finibus est. In hac habitasse platea dictumst. Nam hendrerit pretium est nec sodales. Mauris
+                            finibus est. In hac habitasse platea dictumst. Nam hendrerit pretium est nec sodales.
+                            Mauris
                             tristique leo vel sem
                             finibus, a placerat dui ultricies. Integer tristique odio odio, nec semper diam sodales
                             fermentum.</p>
-                        <div class="card-actions">
-                            <button>Bookmark</button>
-                            <button>Edit</button>
-                            <button>Share</button>
-                        </div>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
-                    <div class="card">
+                </div>
+                <div class="card">
+                    <article>
                         <h2>Super Cool Project</h2>
                         <p>Nunc dictum, risus quis tempus facilisis, urna urna accumsan tellus, at ultricies libero
                             neque ut
                             nunc. Donec placerat
                             pretium finibus. Donec suscipit euismod ultrices.</p>
-                        <div class="card-actions">
-                            <button>Bookmark</button>
-                            <button>Edit</button>
-                            <button>Share</button>
-                        </div>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
-                    <div class="card">
+                </div>
+                <div class="card">
+                    <article>
                         <h2>Super Cool Project</h2>
-                        <p>Nulla facilisi. Nullam elit lectus, sagittis id ante laoreet, tempor fermentum turpis. Nam
+                        <p>Nulla facilisi. Nullam elit lectus, sagittis id ante laoreet, tempor fermentum turpis.
+                            Nam
                             consectetur eget elit eu
-                            viverra. Cras nec orci est. Quisque et erat lacus. Nam orci ipsum, vestibulum luctus libero
+                            viverra. Cras nec orci est. Quisque et erat lacus. Nam orci ipsum, vestibulum luctus
+                            libero
                             non,
                             placerat tristique
-                            elit. Integer id mollis mauris, at iaculis ligula. Nam convallis turpis a faucibus eleifend.
+                            elit. Integer id mollis mauris, at iaculis ligula. Nam convallis turpis a faucibus
+                            eleifend.
                             Aenean eu consectetur eros.
                             Nullam mollis odio eu tellus ultrices rutrum.</p>
-                        <div class="card-actions">
-                            <button>Bookmark</button>
-                            <button>Edit</button>
-                            <button>Share</button>
-                        </div>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
-                    <div class="card">
+                </div>
+                <div class="card">
+                    <article>
                         <h2>Super Cool Project</h2>
                         <p>Nunc arcu lacus, elementum tincidunt elit at, sollicitudin ullamcorper lorem. Vivamus a
                             accumsan ante. Mauris eget
-                            tortor et tortor vulputate commodo. Aliquam dapibus id ex vel luctus. Suspendisse aliquam
+                            tortor et tortor vulputate commodo. Aliquam dapibus id ex vel luctus. Suspendisse
+                            aliquam
                             enim in ipsum hendrerit
                             scelerisque. Morbi maximus diam at hendrerit rhoncus.</p>
-                        <div class="card-actions">
-                            <button>Bookmark</button>
-                            <button>Edit</button>
-                            <button>Share</button>
-                        </div>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
                 </div>
             </div>
             <div id="side-cards">
-                <article id="announcements">
-                    <h2>Announcements</h2>
+                <h2>Announcements</h2>
+                <div id="announcements">
                     <div class="side-card">
-                        <h3>Site Maintenance</h3>
-                        <p>Curabitur euismod fringilla ornare. Aenean at mauris imperdiet, rutrum purus vel, porta
-                            lectus.
-                            Curabitur lacus tellus,
-                            pulvinar at justo vitae, consectetur auctor neque.</p>
+                        <article>
+                            <h3>Site Maintenance</h3>
+                            <p>Curabitur euismod fringilla ornare. Aenean at mauris imperdiet, rutrum purus vel, porta
+                                lectus.
+                                Curabitur lacus tellus,
+                                pulvinar at justo vitae, consectetur auctor neque.</p>
+                        </article>
                         <hr>
-                        <h3>Community Share Day</h3>
-                        <p>Phasellus sit amet mauris nulla. In a lectus sed velit varius vulputate in quis libero.
-                            Vestibulum in nibh ante.</p>
+                        <article>
+                            <h3>Community Share Day</h3>
+                            <p>Phasellus sit amet mauris nulla. In a lectus sed velit varius vulputate in quis libero.
+                                Vestibulum in nibh ante.</p>
+                        </article>
                         <hr>
-                        <h3>Updated Privacy Policy</h3>
-                        <p>Donec metus lectus, pretium ut odio imperdiet, euismod commodo ex. Integer scelerisque neque
-                            et
-                            eros fringilla gravida.
-                            Suspendisse venenatis tortor ut eros pretium venenatis. Suspendisse erat enim, aliquam a
-                            nisl
-                            malesuada, pretium cursus
-                            lacus.</p>
+                        <article>
+                            <h3>Updated Privacy Policy</h3>
+                            <p>Donec metus lectus, pretium ut odio imperdiet, euismod commodo ex. Integer scelerisque
+                                neque
+                                et
+                                eros fringilla gravida.
+                                Suspendisse venenatis tortor ut eros pretium venenatis. Suspendisse erat enim, aliquam a
+                                nisl
+                                malesuada, pretium cursus
+                                lacus.</p>
+                        </article>
                     </div>
-                </article>
+                </div>
                 <div id="trending">
                     <h2>Trending</h2>
                     <div class="side-card">
-                        <div id="tegan">
-                            <button>dog</button>
-                            <h3>@tegan</h3>
-                            <p>World Peace Builder</p>
+                        <div class="hot-trend">
+                            <img class="small-profile-img" src="/cat.jpg">
+                            <!-- image credit: https://www.freeimages.com/photo/green-frog-1361810 -->
+                            <article>
+                                <h3>@tegan</h3>
+                                <p>World Peace Builder</p>
+                            </article>
                         </div>
-                        <div id="morgan">
-                            <button>cat</button>
-                            <h3>@morgan</h3>
-                            <p>Super Cool Project</p>
+                        <div class="hot-trend">
+                            <img class="small-profile-img" src="/green-frog.jpg">
+                            <!-- image credit: https://www.freeimages.com/photo/the-sun-1396604 -->
+                            <article>
+                                <h3>@morgan</h3>
+                                <p>Super Cool Project</p>
+                            </article>
                         </div>
-                        <div id="kendali"><button>alien</button>
-                            <h3>@kendali</h3>
-                            <p>Life Changing App</p>
+                        <div class="hot-trend">
+                            <img class="small-profile-img" src="/parrot.jpg">
+                            <!-- image credit: https://www.freeimages.com/photo/parrot-attack-1410608 -->
+                            <article>
+                                <h3>@kendali</h3>
+                                <p>Life Changing App</p>
+                            </article>
                         </div>
-                        <div id="alex"><button>penguin</button>
-                            <h3>@alex</h3>
-                            <p>No Traffic Maker</p>
+                        <div class="hot-trend">
+                            <img class="small-profile-img" src="/sun.jpg">
+                            <!-- image credit: https://www.freeimages.com/photo/my-cat-1363423 -->
+                            <article>
+                                <h3>@alex</h3>
+                                <p>No Traffic Maker</p>
+                            </article>
                         </div>
                     </div>
                 </div>
