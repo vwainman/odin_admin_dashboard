@@ -26,7 +26,7 @@ button {
 }
 
 hr {
-    /* fixes flex influence on hr element*/
+    /* fixes grid/flex influence on hr elements */
     margin-left: 0;
     margin-right: 0;
 }
@@ -86,13 +86,13 @@ header {
 }
 
 #search {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 15px;
 }
 
 #search-field {
-    flex: 1;
     border-radius: 15px;
     height: 30px;
     border: none;
@@ -100,7 +100,8 @@ header {
 }
 
 #profile {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -138,7 +139,8 @@ header {
 }
 
 #actions {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -191,7 +193,9 @@ header {
 .grid-header {
     grid-column-start: 1;
     grid-column-end: -1;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
     gap: 10px;
 }
 
@@ -237,14 +241,19 @@ header {
     top: 15px;
     right: 15px;
     cursor: pointer;
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: end;
+}
+
+.min-card {
+    padding-right: 10px;
 }
 
 .bottom-right-card-actions {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: end;
     gap: 15px;
 }
 
@@ -257,19 +266,21 @@ header {
 #side-cards {
     display: grid;
     grid-template-rows: auto auto auto 1fr;
+    /* the last 1fr prevents stretching from the previous row */
     gap: 15px 15px;
 }
 
-#side-cards>div {
-    display: flex;
-    flex-direction: column;
+.side-card {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+
+#trending>h2 {
+    padding-bottom: 15px;
 }
 
 .side-card {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    /* necessary for the absolute x positioning */
     position: relative;
 }
 
@@ -278,7 +289,9 @@ header {
 }
 
 .hot-trend {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
     align-items: center;
     gap: 15px;
 }

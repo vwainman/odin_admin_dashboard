@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- TODO: interactive/dynamic features, this project's sole purpose was to utilize grids, I may come back and work on the other aspects -->
 
 <head>
     <meta charset="UTF-8">
@@ -68,7 +69,7 @@
                 <img class="medium-profile-img" src="/profile-pic.jpg" alt="Profile Picture">
                 <!-- image credit: https://www.pexels.com/photo/light-painting-at-night-327509/ -->
                 <h3>Hi there,</h3>
-                <h1>Vincent Wainman (@username)</h1>
+                <h1>Vincent Wainman (@grids_everywhere!)</h1>
             </div>
             <div id="actions">
                 <button id="todos-btn">To-do's</button>
@@ -83,148 +84,7 @@
                     <button id="add-project-btn" onClick="addCard()"><i class="fa fa-plus"></i></button>
                     <button id="undo-last-action" onClick="undoLastAction()"><i class="fa fa-undo"></i></button>
                 </div>
-                <!-- <div class="card"> -->
-                <!-- <div class="min-del-card"> -->
-                <!-- <i class="fa fa-minus"></i> -->
-                <!-- <i class="fa fa-times fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- <article> -->
-                <!-- <h2>Super Cool Project</h2> -->
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere ac lectus eget -->
-                <!-- molestie. In iaculis ligula at -->
-                <!-- nunc semper egestas. Morbi sodales nulla in leo efficitur laoreet. Proin laoreet nisi -->
-                <!-- quis -->
-                <!-- vulputate facilisis. Sed -->
-                <!-- scelerisque, massa eget fringilla ullamcorper, leo sapien luctus nulla, vitae blandit -->
-                <!-- risus -->
-                <!-- sem sed leo.</p> -->
-                <!-- </article> -->
-                <!-- <div class="card-actions"> -->
-                <!-- <i class="fa fa-arrows-h"></i> -->
-                <!-- <i class="fa fa-arrows-v"></i> -->
-                <!-- <i class="fa fa-star-o fa-lg"></i> -->
-                <!-- <i class="fa fa-pencil-square-o fa-lg"></i> -->
-                <!-- <i class="fa fa-share-square-o fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- <div class="card"> -->
-                <!-- <div class="min-del-card"> -->
-                <!-- <i class="fa fa-minus"></i> -->
-                <!-- <i class="fa fa-times fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- <article> -->
-                <!-- <h2>Less Cool Project</h2> -->
-                <!-- <p>Mauris tempor, quam id accumsan eleifend, ex velit congue diam, vel rhoncus sem -->
-                <!-- quam sed -->
-                <!-- turpis. -->
-                <!-- Morbi finibus nec justo -->
-                <!-- ut sodales. Quisque luctus, velit eu commodo dapibus, massa lectus luctus mi, -->
-                <!-- quis mattis -->
-                <!-- nunc -->
-                <!-- turpis non mi. Curabitur -->
-                <!-- sit amet eleifend sapien, et pulvinar urna.</p> -->
-                <!-- </article> -->
-                <!-- <div class="card-actions"> -->
-                <!-- <i class="fa fa-arrows-h"></i> -->
-                <!-- <i class="fa fa-arrows-v"></i> -->
-                <!-- <i class="fa fa-star-o fa-lg"></i> -->
-                <!-- <i class="fa fa-pencil-square-o fa-lg"></i> -->
-                <!-- <i class="fa fa-share-square-o fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- <div class="card"> -->
-                <!-- <div class="min-del-card"> -->
-                <!-- <i class="fa fa-minus"></i> -->
-                <!-- <i class="fa fa-times fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- <article> -->
-                <!-- <h2>Impossible App</h2> -->
-                <!-- <p>Fusce iaculis nisi eget elit malesuada blandit. Vivamus dictum aliquet elementum. Nam -->
-                <!-- porttitor -->
-                <!-- quam ipsum. Fusce vitae -->
-                <!-- finibus est. In hac habitasse platea dictumst. Nam hendrerit pretium est nec sodales. -->
-                <!-- Mauris -->
-                <!-- tristique leo vel sem -->
-                <!-- finibus, a placerat dui ultricies. Integer tristique odio odio, nec semper diam sodales -->
-                <!-- fermentum.</p> -->
-                <!-- </article> -->
-                <!-- <div class="card-actions"> -->
-                <!-- <i class="fa fa-arrows-h"></i> -->
-                <!-- <i class="fa fa-arrows-v"></i> -->
-                <!-- <i class="fa fa-star-o fa-lg"></i> -->
-                <!-- <i class="fa fa-pencil-square-o fa-lg"></i> -->
-                <!-- <i class="fa fa-share-square-o fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- <div class="card"> -->
-                <!-- <div class="min-del-card"> -->
-                <!-- <i class="fa fa-minus"></i> -->
-                <!-- <i class="fa fa-times fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- <article> -->
-                <!-- <h2>Super Cool Project</h2> -->
-                <!-- <p>Nunc dictum, risus quis tempus facilisis, urna urna accumsan tellus, at ultricies libero -->
-                <!-- neque ut -->
-                <!-- nunc. Donec placerat -->
-                <!-- pretium finibus. Donec suscipit euismod ultrices.</p> -->
-                <!-- </article> -->
-                <!-- <div class="card-actions"> -->
-                <!-- <i class="fa fa-arrows-h"></i> -->
-                <!-- <i class="fa fa-arrows-v"></i> -->
-                <!-- <i class="fa fa-star-o fa-lg"></i> -->
-                <!-- <i class="fa fa-pencil-square-o fa-lg"></i> -->
-                <!-- <i class="fa fa-share-square-o fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- <div class="card"> -->
-                <!-- <div class="min-del-card"> -->
-                <!-- <i class="fa fa-minus"></i> -->
-                <!-- <i class="fa fa-times fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- <article> -->
-                <!-- <h2>Super Cool Project</h2> -->
-                <!-- <p>Nulla facilisi. Nullam elit lectus, sagittis id ante laoreet, tempor fermentum turpis. -->
-                <!-- Nam -->
-                <!-- consectetur eget elit eu -->
-                <!-- viverra. Cras nec orci est. Quisque et erat lacus. Nam orci ipsum, vestibulum luctus -->
-                <!-- libero -->
-                <!-- non, -->
-                <!-- placerat tristique -->
-                <!-- elit. Integer id mollis mauris, at iaculis ligula. Nam convallis turpis a faucibus -->
-                <!-- eleifend. -->
-                <!-- Aenean eu consectetur eros. -->
-                <!-- Nullam mollis odio eu tellus ultrices rutrum.</p> -->
-                <!-- </article> -->
-                <!-- <div class="card-actions"> -->
-                <!-- <i class="fa fa-arrows-h"></i> -->
-                <!-- <i class="fa fa-arrows-v"></i> -->
-                <!-- <i class="fa fa-star-o fa-lg"></i> -->
-                <!-- <i class="fa fa-pencil-square-o fa-lg"></i> -->
-                <!-- <i class="fa fa-share-square-o fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- <div class="card"> -->
-                <!-- <div class="min-del-card"> -->
-                <!-- <i class="fa fa-minus"></i> -->
-                <!-- <i class="fa fa-times fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- <article> -->
-                <!-- <h2>Super Cool Project</h2> -->
-                <!-- <p>Nunc arcu lacus, elementum tincidunt elit at, sollicitudin ullamcorper lorem. Vivamus a -->
-                <!-- accumsan ante. Mauris eget -->
-                <!-- tortor et tortor vulputate commodo. Aliquam dapibus id ex vel luctus. Suspendisse -->
-                <!-- aliquam -->
-                <!-- enim in ipsum hendrerit -->
-                <!-- scelerisque. Morbi maximus diam at hendrerit rhoncus.</p> -->
-                <!-- </article> -->
-                <!-- <div class="card-actions"> -->
-                <!-- <i class="fa fa-arrows-h"></i> -->
-                <!-- <i class="fa fa-arrows-v"></i> -->
-                <!-- <i class="fa fa-star-o fa-lg"></i> -->
-                <!-- <i class="fa fa-pencil-square-o fa-lg"></i> -->
-                <!-- <i class="fa fa-share-square-o fa-lg"></i> -->
-                <!-- </div> -->
-                <!-- </div> -->
+
             </div>
             <div id="side-cards">
                 <div class="grid-header">
