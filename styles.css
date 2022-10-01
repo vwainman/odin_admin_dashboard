@@ -1,5 +1,39 @@
+:root {
+    --projects-color: #ffbd03;
+    --todos-color: #5adbb5;
+    --notes-color: #c798cf;
+    --nav-bar-color: #1992d4;
+    --card-color: white;
+    --backdrop-color: #e2e8f0;
+    --dim-p-font-color: rgba(0, 0, 0, 0.711);
+}
+
 h1 {
     font-size: 30px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+button {
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+hr {
+    /* fixes flex influence on hr element*/
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.side-card p,
+.card p {
+    margin: 0;
 }
 
 body {
@@ -9,26 +43,45 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
+/* left-side */
+
 aside {
     color: white;
-    background-color: #1992d4;
+    background-color: var(--nav-bar-color);
     white-space: nowrap;
 }
 
 aside nav a {
-    padding: 0 10px 10px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-size: x-large;
+    padding: 0 15px 10px 15px;
 }
 
-aside nav a i {
+aside nav i {
+    padding-right: 15px;
+}
+
+aside>h1 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+aside>h1 i {
     padding-right: 10px;
 }
 
+/* header content */
+
 header {
-    background-color: #ffffff;
+    background-color: var(--card-color);
     box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
     display: grid;
     grid-template: auto 1fr / 2fr 1fr;
-    padding: 0px 30px 15px 30px;
+    padding: 10px 30px 15px 30px;
 }
 
 #search {
@@ -42,7 +95,7 @@ header {
     border-radius: 15px;
     height: 30px;
     border: none;
-    background-color: #e2e8f0;
+    background-color: var(--backdrop-color);
 }
 
 #profile {
@@ -83,11 +136,6 @@ header {
     border-radius: 50%;
 }
 
-#intro-bar h3,
-#intro-bar h1 {
-    margin: 0;
-}
-
 #actions {
     display: flex;
     justify-content: center;
@@ -96,79 +144,31 @@ header {
 }
 
 #actions button {
-    background-color: #1992d4;
-    border-radius: 20px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
     width: 100px;
     height: 40px;
+    font-size: 15px;
 }
+
+#notes-btn {
+    background-color: var(--notes-color);
+}
+
+#todos-btn {
+    background-color: var(--todos-color);
+}
+
+#projects-btn,
+#add-project-btn,
+#undo-last-action,
+#add-projects-grid-col-space,
+#remove-projects-grid-col-space {
+    background-color: var(--projects-color);
+}
+
+/* projects grid content */
 
 #content-grid {
-    background-color: #e2e8f0;
-}
-
-#projects>h2,
-#announcements>h2 {
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-#side-cards {
-    display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    gap: 15px 15px;
-}
-
-.card,
-.side-card {
-    background-color: white;
-    border-radius: 7px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 30px 25px 20px 25px;
-}
-
-.card {
-    background: linear-gradient(to right,
-            rgb(255, 166, 0) 0%,
-            rgb(255, 166, 0) 2.5%,
-            white 2.5%,
-            white 100%);
-    display: grid;
-    grid-template-rows: 1fr auto;
-}
-
-.card h2,
-.card p {
-    margin: 0 0 0 0;
-}
-
-.card p {
-    color: rgba(0, 0, 0, 0.711);
-}
-
-.card-actions {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    gap: 15px;
-}
-
-.card-actions i {
-    cursor: pointer;
-}
-
-aside nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    font-size: x-large;
-}
-
-#content-grid {
+    background-color: var(--backdrop-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 15px 15px;
@@ -182,16 +182,85 @@ aside nav a {
 #projects-grid {
     display: grid;
     gap: 15px 15px;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
     grid-auto-rows: 1fr;
 }
 
-#projects-grid>h2,
-#side-cards>h2 {
+.grid-header {
     grid-column-start: 1;
     grid-column-end: -1;
-    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#add-project-btn,
+#undo-last-action,
+#add-projects-grid-col-space,
+#remove-projects-grid-col-space {
+    width: 50px;
+    height: 27.2px;
+}
+
+#projects>h2,
+#announcements>h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.card,
+.side-card {
+    background-color: var(--card-color);
+    border-radius: 7px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px 20px 20px max(20px, 4%);
+}
+
+.card {
+    background: linear-gradient(to right,
+            var(--projects-color) 0%,
+            var(--projects-color) 2.5%,
+            var(--card-color) 2.5%,
+            var(--card-color) 100%);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+}
+
+.card p {
+    color: var(--dim-p-font-color);
+}
+
+.min-del-card,
+.del-card {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.min-del-card {
+    display: flex;
+    gap: 10px;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.card-actions i {
+    cursor: pointer;
+}
+
+/* right-side content */
+
+#side-cards {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 15px 15px;
 }
 
 #side-cards>div {
@@ -199,22 +268,16 @@ aside nav a {
     flex-direction: column;
 }
 
-.side-card h3,
-.side-card p {
-    margin: 0;
-}
-
 .side-card {
     flex: 1;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    position: relative;
 }
 
-hr {
-    /* fixes flex influence on hr */
-    margin-left: 0;
-    margin-right: 0;
+#trending-card {
+    gap: 15px;
 }
 
 .hot-trend {

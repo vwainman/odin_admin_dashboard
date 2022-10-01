@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Odin Admin Dashboard</title>
+    <script>
+        const cardHTML = `<div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
+                    <article>
+                        <h2>Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere ac lectus eget molestie. In iaculis ligula at nunc semper egestas.</p>
+                    </article>
+                    <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
+                        <i class="fa fa-star-o fa-lg"></i>
+                        <i class="fa fa-pencil-square-o fa-lg"></i>
+                        <i class="fa fa-share-square-o fa-lg"></i>
+                    </div>
+                </div>`;
+
+        function addCard() {
+            const projectsGrid = document.querySelector('#projects-grid');
+            projectsGrid.innerHTML += cardHTML;
+        }
+
+    </script>
 </head>
 
 <body>
@@ -46,15 +71,23 @@
                 <h1>Vincent Wainman (@username)</h1>
             </div>
             <div id="actions">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+                <button id="todos-btn">To-do's</button>
+                <button id="projects-btn">Projects</button>
+                <button id="notes-btn">Notes</button>
             </div>
         </header>
         <div id="content-grid">
             <div id="projects-grid">
-                <h2>Your Projects</h2>
+                <div class="grid-header">
+                    <h2 class="grid-title">Your Projects</h2>
+                    <button id="add-project-btn" onClick="addCard()"><i class="fa fa-plus"></i></button>
+                    <button id="undo-last-action" onClick="undoLastAction()"><i class="fa fa-undo"></i></button>
+                </div>
                 <div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
                     <article>
                         <h2>Super Cool Project</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere ac lectus eget
@@ -67,12 +100,18 @@
                             sem sed leo.</p>
                     </article>
                     <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
                         <i class="fa fa-star-o fa-lg"></i>
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                         <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
                 </div>
                 <div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
                     <article>
                         <h2>Less Cool Project</h2>
                         <p>Mauris tempor, quam id accumsan eleifend, ex velit congue diam, vel rhoncus sem
@@ -86,12 +125,18 @@
                             sit amet eleifend sapien, et pulvinar urna.</p>
                     </article>
                     <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
                         <i class="fa fa-star-o fa-lg"></i>
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                         <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
                 </div>
                 <div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
                     <article>
                         <h2>Impossible App</h2>
                         <p>Fusce iaculis nisi eget elit malesuada blandit. Vivamus dictum aliquet elementum. Nam
@@ -104,12 +149,18 @@
                             fermentum.</p>
                     </article>
                     <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
                         <i class="fa fa-star-o fa-lg"></i>
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                         <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
                 </div>
                 <div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
                     <article>
                         <h2>Super Cool Project</h2>
                         <p>Nunc dictum, risus quis tempus facilisis, urna urna accumsan tellus, at ultricies libero
@@ -118,12 +169,18 @@
                             pretium finibus. Donec suscipit euismod ultrices.</p>
                     </article>
                     <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
                         <i class="fa fa-star-o fa-lg"></i>
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                         <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
                 </div>
                 <div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
                     <article>
                         <h2>Super Cool Project</h2>
                         <p>Nulla facilisi. Nullam elit lectus, sagittis id ante laoreet, tempor fermentum turpis.
@@ -139,12 +196,18 @@
                             Nullam mollis odio eu tellus ultrices rutrum.</p>
                     </article>
                     <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
                         <i class="fa fa-star-o fa-lg"></i>
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                         <i class="fa fa-share-square-o fa-lg"></i>
                     </div>
                 </div>
                 <div class="card">
+                    <div class="min-del-card">
+                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-times fa-lg"></i>
+                    </div>
                     <article>
                         <h2>Super Cool Project</h2>
                         <p>Nunc arcu lacus, elementum tincidunt elit at, sollicitudin ullamcorper lorem. Vivamus a
@@ -155,6 +218,8 @@
                             scelerisque. Morbi maximus diam at hendrerit rhoncus.</p>
                     </article>
                     <div class="card-actions">
+                        <i class="fa fa-arrows-h"></i>
+                        <i class="fa fa-arrows-v"></i>
                         <i class="fa fa-star-o fa-lg"></i>
                         <i class="fa fa-pencil-square-o fa-lg"></i>
                         <i class="fa fa-share-square-o fa-lg"></i>
@@ -162,9 +227,14 @@
                 </div>
             </div>
             <div id="side-cards">
-                <h2>Announcements</h2>
+                <div class="grid-header">
+                    <h2 class="grid-title">Announcements</h2>
+                </div>
                 <div id="announcements">
                     <div class="side-card">
+                        <div class="del-card">
+                            <i class="fa fa-times fa-lg"></i>
+                        </div>
                         <article>
                             <h3>Site Maintenance</h3>
                             <p>Curabitur euismod fringilla ornare. Aenean at mauris imperdiet, rutrum purus vel, porta
@@ -194,7 +264,10 @@
                 </div>
                 <div id="trending">
                     <h2>Trending</h2>
-                    <div class="side-card">
+                    <div id="trending-card" class="side-card">
+                        <div class="del-card">
+                            <i class="fa fa-times fa-lg"></i>
+                        </div>
                         <div class="hot-trend">
                             <img class="small-profile-img" src="/cat.jpg">
                             <!-- image credit: https://www.freeimages.com/photo/green-frog-1361810 -->
